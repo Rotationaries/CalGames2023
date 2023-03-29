@@ -22,10 +22,23 @@ public class Drivetrain {
   public final Translation2d m_backLeftLocation = new Translation2d(-0.381, 0.381);
   public final Translation2d m_backRightLocation = new Translation2d(-0.381, -0.381);
   
-  private final SwerveModule m_frontLeft = new SwerveModule(1, 2, 0, 1, 2, 3);
-  private final SwerveModule m_frontRight = new SwerveModule(3, 4, 4, 5, 6, 7);
-  private final SwerveModule m_backLeft = new SwerveModule(5, 6, 8, 9, 10, 11);
-  private final SwerveModule m_backRight = new SwerveModule(7, 8, 12, 13, 14, 15);
+  private final SwerveModule m_frontLeft = new SwerveModule(
+    DriveConstants.FLDMChannel, DriveConstants.FLTMChannel, 
+    DriveConstants.FLDEChannelA, DriveConstants.FLDEChannelB, 
+    DriveConstants.FLTEChannelA, DriveConstants.FLTEChannelB);
+  private final SwerveModule m_frontRight = new SwerveModule(
+    DriveConstants.FRDMChannel, DriveConstants.FRTMChannel, 
+    DriveConstants.FRDEChannelA, DriveConstants.FRDEChannelB, 
+    DriveConstants.FRTEChannelA, DriveConstants.FRTEChannelB);
+  private final SwerveModule m_backLeft = new SwerveModule(
+    DriveConstants.BLDMChannel, DriveConstants.BLTMChannel, 
+    DriveConstants.BLDEChannelA, DriveConstants.BLDEChannelB, 
+    DriveConstants.BLTEChannelA, DriveConstants.BLTEChannelB);
+  private final SwerveModule m_backRight = new SwerveModule(
+    DriveConstants.BRDMChannel, DriveConstants.BRTMChannel, 
+    DriveConstants.BRDEChannelA, DriveConstants.BRDEChannelB, 
+    DriveConstants.BRTEChannelA, DriveConstants.BRTEChannelB);
+  
 
   private final AHRS ahrs = new AHRS(SPI.Port.kMXP);
 
