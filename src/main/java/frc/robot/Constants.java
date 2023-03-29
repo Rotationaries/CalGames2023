@@ -21,6 +21,35 @@ public final class Constants {
   public static class DriveConstants {
     public static final double kMaxSpeed = 3.0; // 3 meters per second
     public static final double kMaxAngularSpeed = Math.PI; // 1/2 rotation per second
+
+    //FL-Front Left, DM-Driving Motor, TM-Turning Motor, DE-Driving Encoder, TE-Turning Encoder
+    public static final double FLDMChannel = 1;
+    public static final double FLTMChannel = 2;
+    public static final double FLDEChannelA = 0;
+    public static final double FLDEChannelB = 1;
+    public static final double FLTEChannelA = 2;
+    public static final double FLTEChannelB = 3;
+
+    public static final double FRDMChannel = 3;
+    public static final double FRTMChannel = 4;
+    public static final double FRDEChannelA = 4;
+    public static final double FRDEChannelB = 5;
+    public static final double FRTEChannelA = 6;
+    public static final double FRTEChannelB = 7;
+
+    public static final double BLDMChannel = 5;
+    public static final double BLTMChannel = 6;
+    public static final double BLDEChannelA = 8;
+    public static final double BLDEChannelB = 9;
+    public static final double BLTEChannelA = 10;
+    public static final double BLTEChannelB = 11;
+
+    public static final double BRDMChannel = 7;
+    public static final double BRTMChannel = 8;
+    public static final double BRDEChannelA = 12;
+    public static final double BRDEChannelB = 13;
+    public static final double BRTEChannelA = 14;
+    public static final double BRTEChannelB = 15;
   }
   
   public static class SwerveConstants {

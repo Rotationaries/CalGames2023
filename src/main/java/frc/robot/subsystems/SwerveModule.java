@@ -49,6 +49,7 @@ public class SwerveModule {
    * @param turningEncoderChannelA DIO input for the turning encoder channel A
    * @param turningEncoderChannelB DIO input for the turning encoder channel B
    */
+
   public SwerveModule(
       int driveMotorChannel,
       int turningMotorChannel,
@@ -82,6 +83,7 @@ public class SwerveModule {
    *
    * @return The current state of the module.
    */
+
   public SwerveModuleState getState() {
     return new SwerveModuleState(
         m_driveEncoder.getRate(), new Rotation2d(m_turningEncoder.getDistance()));
@@ -92,6 +94,7 @@ public class SwerveModule {
    *
    * @return The current position of the module.
    */
+
   public SwerveModulePosition getPosition() {
     return new SwerveModulePosition(
         m_driveEncoder.getDistance(), new Rotation2d(m_turningEncoder.getDistance()));
@@ -102,6 +105,7 @@ public class SwerveModule {
    *
    * @param desiredState Desired state with speed and angle.
    */
+  
   public void setDesiredState(SwerveModuleState desiredState) {
     // Optimize the reference state to avoid spinning further than 90 degrees
     SwerveModuleState state =
