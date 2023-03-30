@@ -12,10 +12,11 @@ import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
 import edu.wpi.first.math.kinematics.SwerveDriveOdometry;
 import edu.wpi.first.math.kinematics.SwerveModulePosition;
 import edu.wpi.first.wpilibj.SPI;
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.DriveConstants;
+import frc.robot.commands.Drivetrain.JoystickDrive;
 
-/** Represents a swerve drive style drivetrain. */
-public class Drivetrain {
+public class Drivetrain extends SubsystemBase{
 
   public final Translation2d m_frontLeftLocation = new Translation2d(0.381, 0.381);
   public final Translation2d m_frontRightLocation = new Translation2d(0.381, -0.381);
