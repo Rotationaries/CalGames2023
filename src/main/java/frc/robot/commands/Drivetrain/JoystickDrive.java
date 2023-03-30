@@ -48,6 +48,7 @@ public class JoystickDrive extends CommandBase {
             * DriveConstants.kMaxAngularSpeed;
 
     drive.drive(xSpeed, ySpeed, rot, fieldRelative);
+    System.out.println("Joystick is controlling robot!");
   }
 
   @Override
