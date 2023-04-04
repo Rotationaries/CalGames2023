@@ -6,6 +6,7 @@ package frc.robot.subsystems;
 
 import com.kauailabs.navx.frc.AHRS;
 
+import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.kinematics.ChassisSpeeds;
 import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
@@ -93,6 +94,10 @@ public class Drivetrain extends SubsystemBase{
           m_backLeft.getPosition(),
           m_backRight.getPosition()
         });
+  }
+
+  public Pose2d getPose(){
+    return m_odometry.getPoseMeters();
   }
 }
 
