@@ -18,7 +18,7 @@ import frc.robot.Constants.DriveConstants;
 
 public class Drivetrain extends SubsystemBase{
 
-  public final Translation2d m_frontLeftLocation = new Translation2d(0.381, 0.381);
+  public final Translation2d m_frontLeftLocation = new Translation2d(0.381, 0.381); //meters
   public final Translation2d m_frontRightLocation = new Translation2d(0.381, -0.381);
   public final Translation2d m_backLeftLocation = new Translation2d(-0.381, 0.381);
   public final Translation2d m_backRightLocation = new Translation2d(-0.381, -0.381);
