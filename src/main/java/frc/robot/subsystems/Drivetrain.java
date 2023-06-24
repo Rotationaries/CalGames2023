@@ -25,19 +25,15 @@ public class Drivetrain extends SubsystemBase{
   
   private final SwerveModule m_frontLeft = new SwerveModule(
     DriveConstants.FLDMChannel, DriveConstants.FLTMChannel, 
-    DriveConstants.FLDEChannelA, DriveConstants.FLDEChannelB, 
     DriveConstants.FLTEChannelA, DriveConstants.FLTEChannelB);
   private final SwerveModule m_frontRight = new SwerveModule(
     DriveConstants.FRDMChannel, DriveConstants.FRTMChannel, 
-    DriveConstants.FRDEChannelA, DriveConstants.FRDEChannelB, 
     DriveConstants.FRTEChannelA, DriveConstants.FRTEChannelB);
   private final SwerveModule m_backLeft = new SwerveModule(
     DriveConstants.BLDMChannel, DriveConstants.BLTMChannel, 
-    DriveConstants.BLDEChannelA, DriveConstants.BLDEChannelB, 
     DriveConstants.BLTEChannelA, DriveConstants.BLTEChannelB);
   private final SwerveModule m_backRight = new SwerveModule(
     DriveConstants.BRDMChannel, DriveConstants.BRTMChannel, 
-    DriveConstants.BRDEChannelA, DriveConstants.BRDEChannelB, 
     DriveConstants.BRTEChannelA, DriveConstants.BRTEChannelB);
   
 
