@@ -10,46 +10,52 @@ public final class Constants {
   }
 
   public static class DriveConstants {
-    public static final double kMaxSpeed = 3.0; // 3 meters per second
-    public static final double kMaxAngularSpeed = Math.PI; // 1/2 rotation per second
+    public static final double kMaxSpeed = 4; // 1 meters per second
+    public static final double kMaxAngularSpeed = 24; // 12 radians? per second
 
-    //FL-Front Left, DM-Driving Motor, TM-Turning Motor, DE-Driving Encoder, TE-Turning Encoder
-    public static final int FLDMChannel = 6;
-    public static final int FLTMChannel = 2;
-    public static final int FLTEChannel = 3;
+    //FL-Front Left, DM-Driving Motor, TM-Turning Motor, TE-Turning Encoder
+    public static final int FLDMChannel = 12;
+    public static final int FLTMChannel = 11;
+    public static final int FLTEChannel = 13;
+    public static final double FLTEOffsetDegrees = 278.174;
 
-    public static final int FRDMChannel = 5;
-    public static final int FRTMChannel = 4;
-    public static final int FRTEChannel = 7;
+    public static final int FRDMChannel = 3;
+    public static final int FRTMChannel = 2;
+    public static final int FRTEChannel = 4;
+    public static final double FRTEOffsetDegrees = 343.916;
 
-    public static final int BLDMChannel = 7;
-    public static final int BLTMChannel = 1;
-    public static final int BLTEChannel = 11;
+    public static final int BLDMChannel = 9;
+    public static final int BLTMChannel = 8;
+    public static final int BLTEChannel = 10;
+    public static final double BLTEOffsetDegrees = 119.707;
 
-    public static final int BRDMChannel = 3;
-    public static final int BRTMChannel = 8;
-    public static final int BRTEChannel = 15;
+    public static final int BRDMChannel = 6;
+    public static final int BRTMChannel = 5;
+    public static final int BRTEChannel = 7;
+    public static final double BRTEOffsetDegrees = 181.494;
   }
   
   public static class SwerveConstants {
     public static final double kWheelRadius = 0.0508;
-    public static final int kEncoderResolution = 4096;
+    public static final int kEncoderResolution = 42;
 
     public static final double kModuleMaxAngularVelocity = DriveConstants.kMaxAngularSpeed;
-    public static final double kModuleMaxAngularAcceleration = 2 * Math.PI; // radians per second squared
+    public static final double kModuleMaxAngularAcceleration = 5; // radians per second squared
 
-    public static final double PIDp = 1;
+    // drive PID constants
+    public static final double PIDp = 0.2;
     public static final double PIDi = 0;
-    public static final double PIDd = 0;
+    public static final double PIDd = 0.0;
 
-    public static final double ProfiledPIDp = 1;
-    public static final double ProfiledPIDi = 0;
-    public static final double ProfiledPIDd = 0;
+    // turning PID constants 
+    public static final double ProfiledPIDp = 0.4;
+    public static final double ProfiledPIDi = 0.0000000;
+    public static final double ProfiledPIDd = 0.0001;
 
-    public static final double DriveKs = 1;
-    public static final double DriveKv = 3;
+    public static final double DriveKs = 0;
+    public static final double DriveKv = 0;
 
-    public static final double TurnKs = 1;
-    public static final double TurnKv = 0.5;
+    public static final double TurnKs = 0;
+    public static final double TurnKv = 0;
   }
 }
