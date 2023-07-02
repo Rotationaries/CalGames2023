@@ -40,12 +40,10 @@ public class SwerveModule extends SubsystemBase{
           new TrapezoidProfile.Constraints(
               SwerveConstants.kModuleMaxAngularVelocity, SwerveConstants.kModuleMaxAngularAcceleration));
 
-
   // Gains are for example purposes only - must be determined for your own robot!
   // private final SimpleMotorFeedforward m_driveFeedforward = new SimpleMotorFeedforward(SwerveConstants.DriveKs, SwerveConstants.DriveKv);
   // private final SimpleMotorFeedforward m_turnFeedforward = new SimpleMotorFeedforward(SwerveConstants.TurnKs, SwerveConstants.TurnKv);
 
-  public final XboxController controller = new  XboxController(0);;
   /**
    * Constructs a SwerveModule with a drive motor, turning motor, drive encoder and turning encoder.
    *

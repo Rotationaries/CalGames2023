@@ -4,12 +4,20 @@
 
 package frc.robot;
 
+import edu.wpi.first.math.geometry.Translation2d;
+
 public final class Constants {
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
   }
 
   public static class DriveConstants {
+
+    public static final Translation2d m_frontLeftLocation = new Translation2d(0.3429, 0.3429); //meters
+    public static final Translation2d m_frontRightLocation = new Translation2d(0.3429, -0.3429);
+    public static final Translation2d m_backLeftLocation = new Translation2d(-0.3429, 0.3429);
+    public static final Translation2d m_backRightLocation = new Translation2d(-0.3429, -0.3429);
+    
     public static final double kMaxSpeed = 4; // 1 meters per second
     public static final double kMaxAngularSpeed = 24; // 12 radians? per second
 
