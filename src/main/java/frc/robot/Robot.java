@@ -58,7 +58,6 @@ public class Robot extends TimedRobot {
 
   @Override
   public void autonomousPeriodic() {
-    //m_swerve.drive(0.25, 0.25,0, true);
   }
 
   @Override
@@ -72,10 +71,6 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     joystickDrive.schedule();
-    //Shuffleboard.getTab("Drive Encoder").add("value", sm.getDriveEncoderValues());
-    //Shuffleboard.getTab("Drive Encoder").add("value", sm.getTurnEncoderValues());
-    //System.out.println(sm.getEncoder().getVelocity());
-    //m_swerve.printEncoder();
   }
 
   @Override

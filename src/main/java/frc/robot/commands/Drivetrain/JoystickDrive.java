@@ -34,33 +34,23 @@ public class JoystickDrive extends CommandBase {
   @Override
   public void execute() {
     // Inverted X speed / Forwards and backwards
-
-   // final double xSpeed = MathUtil.applyDeadband(controller.getLeftY(), 0.02);
-
     final double xSpeed =
         -m_xspeedLimiter.calculate(MathUtil.applyDeadband(controller.getLeftY(), 0.02))
             * DriveConstants.kMaxSpeed;
-
-   // final double ySpeed = MathUtil.applyDeadband(controller.getLeftX(), 0.02);
 
     // Inverted Y speed / Strafe speed
     final double ySpeed =
         -m_yspeedLimiter.calculate(MathUtil.applyDeadband(controller.getLeftX(), 0.02))
             * DriveConstants.kMaxSpeed;
 
-   // final double rot = controller.getRightX();
-
     // Inverted angular rotation value
     final double rot =
         -m_rotLimiter.calculate(MathUtil.applyDeadband(controller.getRightX(), 0.02))
             * DriveConstants.kMaxAngularSpeed;
 
-      SmartDashboard.putNumber("Rottation", rot);
-    //System.out.println("current rotation: " + rot);
-    //System.out.println("Drive Speed (x): " + xSpeed + "Drive Speed (y): " + ySpeed + "Rotation Speed: " + rot );
+      SmartDashboard.putNumber("Rotation", rot);
 
     drive.drive(xSpeed, ySpeed, rot, fieldRelative);
-    //System.out.println("Joystick is controlling robot!");
   }
 
   @Override

@@ -57,7 +57,6 @@ public class Drivetrain extends SubsystemBase{
 
   public Drivetrain() {
     ahrs.reset();
-   // SmartDashboard.putNumber("Velocity Error", m_frontLeft.getVelocityError());
   }
 
   /**
@@ -104,10 +103,6 @@ public class Drivetrain extends SubsystemBase{
     SmartDashboard.putNumber("BR Rotation", m_backRight.getModuleAngle());
     SmartDashboard.putNumber("BR D R U", swerveModuleStates[3].angle.getRadians());
     SmartDashboard.putNumber("BR D R", m_backRight.getDesiredAngle());
-
-    // System.out.println(swerveModuleStates[3]);
- // System.out.println("frontleft current Rotation: " + m_frontLeft.getStateRotation(swerveModuleStates[0]));
-   // System.out.println("frontleft current state: " + m_frontLeft.getState().toString() );
   }
 
   /** Updates the field relative position of the robot. */
@@ -126,14 +121,8 @@ public class Drivetrain extends SubsystemBase{
     return m_odometry.getPoseMeters();
   }
 
-  public void printEncoder() {
-    //System.out.println(m_frontLeft.getVelocityError());
-  }
-
   @Override
-  public void periodic(){
-    //System.out.println(m_frontLeft.getModuleVelocity());
-  }
+  public void periodic(){}
 
 }
 

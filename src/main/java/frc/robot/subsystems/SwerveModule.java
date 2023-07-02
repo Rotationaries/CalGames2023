@@ -90,7 +90,6 @@ public class SwerveModule extends SubsystemBase{
 
   public double getModuleVelocity(){
     return m_driveEncoder.getVelocity();
-    //m_drivePIDController.measurement;
   }
 
   public double getDesiredAngle() {
@@ -151,8 +150,6 @@ public class SwerveModule extends SubsystemBase{
     SwerveModuleState state =
         SwerveModuleState.optimize(desiredState, new Rotation2d(m_moduleAngleRadians));
 
-    //System.out.println("current: " + m_moduleAngleRadians + "setpoint: " + state.angle.getRadians() + " desiredPre: " + desiredState.angle.getRadians());
-
     // Calculate the drive output from the drive PID controller.
     final double driveOutput =
         m_drivePIDController.calculate(m_driveEncoder.getVelocity(), state.speedMetersPerSecond);
@@ -167,18 +164,8 @@ public class SwerveModule extends SubsystemBase{
     // final double turnFeedforward =
     //     m_turnFeedforward.calculate(m_turningPIDController.getSetpoint().velocity);
 
-   // m_driveMotor.setVoltage(driveOutput + driveFeedforward);
-   // m_turningMotor.setVoltage(controller.getRightX());
-    //SmartDashboard.putNumber("turning current radians" + this.toString(), m_moduleAngleRadians);
     m_turningMotor.set(turnOutput);
-    // System.out.println("Turn Motor Speed: " + turnOutput);
     m_driveMotor.set(driveOutput);
-    // System.out.println("Drive Velocity: " + driveOutput);
-    // System.out.println("Wheel Rotation: " + getTurnEncoderValues());
-    // System.out.println("Module Velocity: " + getModuleVelocity());
-   // System.out.println(turnOutput + turnFeedforward);
-    //System.out.println(state);
-   // m_turningMotor.setVoltage(1);
   }
 
   public double getDriveEncoderValues() {
