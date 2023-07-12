@@ -16,4 +16,25 @@ public final class Constants {
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
   }
+
+  public static class IntakeConstants {
+    public static final int indexMotorChannel = 1;
+    public static final int intake1Channel = 2;
+    public static final int intake2Channel = 3;
+
+    public static final double intakeIndexSpeed = 0.5;
+    public static final double intakeFlywheelSpeed = 1;
+
+    public static final double outtakeIndexSpeed = 0.5;
+    public static final double outtakeFlywheelSpeed = 1;
+
+    public static final double launchIndexSpeed = 0.5;
+    public static final double launchFlywheelSpeed = 1;
+  }
+
+  public static class ArmConstants {
+    public static final int armMotorChannel = 4;
+    public static final double pivotSpeed = 0.5;
+    public static final double armRatio = 108;
+  }
 }
